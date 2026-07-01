@@ -1,0 +1,17 @@
+.about { display: flex; flex-direction: column; gap: var(--space-lg); }
+.grid { display: grid; grid-template-columns: 1fr; gap: var(--space-lg); align-items: start; }
+.copy { display: flex; flex-direction: column; gap: var(--space-sm); color: var(--color-text-muted); }
+.statGrid { display: grid; grid-template-columns: 1fr; gap: var(--space-sm); }
+.statGrid article { min-height: 160px; display: flex; flex-direction: column; justify-content: space-between; }
+.statGrid svg { color: var(--color-blue-light); width: 28px; height: 28px; }
+.statGrid h3, .philosophy h3 { color: var(--color-white); font-family: var(--font-display); font-size: var(--text-h3); line-height: 1.05; letter-spacing: 0; }
+.philosophy { display: grid; grid-template-columns: 1fr; gap: var(--space-sm); }
+.philosophy article { border-top: 3px solid var(--color-blue); }
+.philosophy p { color: var(--color-text-muted); margin-top: var(--space-sm); }
+@media (min-width: 768px) {
+  .statGrid, .philosophy { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 1024px) {
+  .grid { grid-template-columns: 1.2fr 0.8fr; }
+  .philosophy { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}

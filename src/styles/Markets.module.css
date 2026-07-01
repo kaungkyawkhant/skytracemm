@@ -1,0 +1,16 @@
+.markets { display: grid; grid-template-columns: 1fr; gap: var(--space-lg); }
+.heading { max-width: 430px; }
+.grid { display: grid; grid-template-columns: 1fr; gap: var(--space-sm); }
+.card { overflow: hidden; min-height: 260px; }
+.card b { position: absolute; right: var(--space-md); top: var(--space-sm); color: rgba(0, 117, 193, 0.13); font-family: var(--font-display); font-size: 5rem; line-height: 1; }
+.card svg { position: relative; color: var(--color-blue-light); width: 30px; height: 30px; }
+.card h3 { position: relative; margin-top: var(--space-md); color: var(--color-white); font-family: var(--font-display); font-size: var(--text-h3); line-height: 1.05; }
+.card p { position: relative; color: var(--color-text-muted); margin-top: var(--space-sm); }
+.card div { position: relative; display: flex; flex-wrap: wrap; gap: var(--space-xs); margin-top: var(--space-sm); }
+.card span { padding: 0.2rem 0.55rem; border-radius: 999px; background: var(--color-blue-dim); color: var(--color-blue-light); font-size: var(--text-caption); font-weight: 700; }
+@media (min-width: 768px) {
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 1024px) {
+  .markets { grid-template-columns: 0.8fr 1.2fr; }
+}

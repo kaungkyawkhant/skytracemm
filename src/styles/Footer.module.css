@@ -1,0 +1,14 @@
+.footer { background: var(--color-bg); border-top: 1px solid var(--color-border); }
+.grid { display: grid; grid-template-columns: 1fr; gap: var(--space-lg); padding-top: var(--space-xl); padding-bottom: var(--space-xl); }
+.wordmark { display: inline-flex; align-items: center; gap: 0.5rem; background: none; border: 0; color: var(--color-blue); font-family: var(--font-display); font-size: 1.8rem; font-weight: 800; line-height: 1; letter-spacing: 0; }
+.logo { display: block; border-radius: 6px; }
+.wordmark span { color: var(--color-white); }
+.footer p { color: var(--color-text-muted); margin-top: var(--space-xs); }
+.footer a { display: inline-grid; place-items: center; width: 44px; height: 44px; margin-top: var(--space-sm); border: 1px solid var(--color-border); border-radius: 4px; color: var(--color-blue-light); }
+.footer h3 { color: var(--color-white); font-family: var(--font-display); font-size: var(--text-h3); margin-bottom: var(--space-sm); }
+.footer button:not(.wordmark) { display: block; min-height: 32px; background: none; border: 0; color: var(--color-text-muted); }
+.footer button:not(.wordmark):hover { color: var(--color-blue-light); }
+.bottom { padding: var(--space-sm); border-top: 1px solid var(--color-border); color: var(--color-text-muted); font-size: var(--text-small); text-align: center; }
+@media (min-width: 768px) {
+  .grid { grid-template-columns: 1.4fr 0.8fr 1fr; }
+}

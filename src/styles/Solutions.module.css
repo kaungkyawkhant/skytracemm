@@ -1,0 +1,13 @@
+.tabs { display: flex; flex-direction: column; gap: var(--space-xs); margin-bottom: var(--space-lg); border-bottom: 1px solid var(--color-border); }
+.tabs button { min-height: 48px; background: transparent; border: 0; border-bottom: 3px solid transparent; color: var(--color-text-muted); font-weight: 700; text-align: left; }
+.tabs button:hover, .tabs .active { color: var(--color-white); border-color: var(--color-blue); }
+.grid { display: grid; grid-template-columns: 1fr; gap: var(--space-sm); }
+.card h3 { color: var(--color-white); font-family: var(--font-display); font-size: var(--text-h3); line-height: 1.05; }
+.card p { color: var(--color-text-muted); margin-top: var(--space-xs); }
+@media (min-width: 768px) {
+  .tabs { flex-direction: row; justify-content: center; }
+  .tabs button { padding-inline: var(--space-md); text-align: center; }
+}
+@media (min-width: 1024px) {
+  .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}

@@ -1,0 +1,53 @@
+.navbar {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 72px;
+  padding: 0.75rem clamp(1rem, 4vw, 3rem);
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transition: background 0.2s ease, border-color 0.2s ease, backdrop-filter 0.2s ease;
+}
+.scrolled { background: var(--color-navbar-scrolled); border-color: var(--color-border); backdrop-filter: blur(12px); }
+.wordmark { display: flex; align-items: center; gap: 0.6rem; background: none; border: 0; color: var(--color-white); line-height: 1; }
+.logo { display: block; border-radius: 6px; }
+.wordmarkText { display: flex; flex-direction: column; align-items: flex-start; }
+.wordmarkText span { font-family: var(--font-display); font-size: 1.6rem; font-weight: 700; letter-spacing: 0; }
+.wordmarkText strong { color: var(--color-blue); margin-right: 0.18rem; }
+.wordmarkText b { color: var(--color-white); }
+.wordmarkText small { color: var(--color-text-muted); font-size: var(--text-caption); letter-spacing: 0.12em; margin-top: 0.15rem; }
+.links { display: none; align-items: center; gap: 1.1rem; }
+.link { position: relative; background: none; border: 0; color: var(--color-text-muted); font-size: 0.82rem; font-weight: 600; min-height: 44px; }
+.link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0.45rem; height: 2px; background: var(--color-blue); transform: scaleX(0); transform-origin: left; transition: transform 0.2s ease; }
+.link:hover, .active { color: var(--color-white); }
+.active::after { transform: scaleX(1); }
+.cta, .drawerCta { min-height: 44px; border: 1.5px solid var(--color-blue); border-radius: 4px; background: transparent; color: var(--color-white); padding: 0.65rem 1rem; font-weight: 600; }
+.cta:hover, .drawerCta:hover { background: var(--color-blue); }
+.actions { display: flex; align-items: center; gap: 0.6rem; }
+.menuButton { display: inline-grid; place-items: center; width: 44px; height: 44px; border: 1px solid var(--color-border); border-radius: 4px; background: var(--color-surface); color: var(--color-white); }
+.drawer {
+  position: fixed;
+  top: 72px;
+  right: 0;
+  width: min(320px, 86vw);
+  height: calc(100dvh - 72px);
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: var(--space-md);
+  background: var(--color-bg);
+  border-left: 1px solid var(--color-border);
+  transform: translateX(100%);
+  transition: transform 0.24s ease;
+}
+.drawerOpen { transform: translateX(0); }
+.drawer button { min-height: 48px; background: none; border: 0; color: var(--color-text-primary); text-align: left; }
+.drawer .drawerActive { color: var(--color-blue-light); }
+.drawer .drawerCta { text-align: center; margin-top: var(--space-sm); }
+@media (min-width: 1240px) {
+  .links { display: flex; }
+  .menuButton, .drawer { display: none; }
+}
